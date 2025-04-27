@@ -1,0 +1,111 @@
+* {
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+}
+
+.section {
+   width: 100%;
+   height: 100vh;
+   background-color: #191919;
+   display: grid;
+   place-items: center;
+   position: relative;
+}
+
+.box {
+   width: 1000px;
+   height: 800px;
+   background-color: #ac474b;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   gap: 20px;
+}
+
+a {
+   text-decoration: none;
+   color: inherit;
+}
+
+.flower {
+   width: 150px;
+   height: 100px;
+   display: flex;
+}
+
+.circle {
+   width: 80px;
+   height: 80px;
+   background-color: #ac474b;
+   border: 20px solid #fff;
+   border-radius: 50px 50px 0 50px;
+}
+
+.circle.circle2 {
+   border-radius: 50px 50px 50px 0;
+}
+
+.square {
+   width: 400px;
+   height: 400px;
+   position: relative;
+}
+
+.rec {
+   width: 170px;
+   height: 170px;
+   background-color: #fff;
+   position: absolute;
+
+   animation: rec 0.5s linear infinite alternate;
+}
+
+@keyframes rec {
+   to {
+      transform: scale(1.2);
+      background-color: #ac474b;
+   }
+}
+
+.rec:first-child {
+   left: 0;
+   top: 0;
+}
+
+.rec:nth-child(2) {
+   right: 0;
+   top: 0;
+}
+
+.rec:nth-child(3) {
+   left: 0;
+   bottom: 0;
+}
+
+.rec:last-child {
+   right: 0;
+   bottom: 0;
+}
+
+.next {
+   padding: 10px;
+   display: flex;
+   width: 70px;
+   gap: 10px;
+   border: 1px solid black;
+   justify-content: center;
+   align-items: center;
+   position: absolute;
+   bottom: 130px;
+   right: 45%;
+}
+
+.next.back {
+   left: 45%;
+}
+
+.back i {
+   transform: rotate(180deg);
+}
